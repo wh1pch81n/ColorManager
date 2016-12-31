@@ -8,13 +8,24 @@
 
 import UIKit
 
+/**
+Style manager is a globally available, globally settable class of which anyone can grab a theme color, or font
+*/
 @objc
 public class StyleManager: NSObject {
+	/** The current style */
 	public static var style: ColorProtocol & FontProtocol = DefaultStyle()
+	
+	/** computed property to get only the ColorProtocol */
 	public static var color: ColorProtocol { return style }
+	
+	/** computed property to get only the FontProtocol */
 	public static var font: FontProtocol { return style }
 }
 
+/**
+An object with the default style
+*/
 public class DefaultStyle: NSObject, ColorProtocol, FontProtocol {
 	
 	// MARK: - ColorProtocol
