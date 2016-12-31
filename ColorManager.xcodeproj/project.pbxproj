@@ -13,6 +13,10 @@
 		7F78718A1E173E58008568C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F7871891E173E58008568C2 /* Assets.xcassets */; };
 		7F78718D1E173E58008568C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F78718B1E173E58008568C2 /* LaunchScreen.storyboard */; };
 		7F7871981E173E58008568C2 /* ColorManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7871971E173E58008568C2 /* ColorManagerTests.swift */; };
+		7F7871A51E173E9B008568C2 /* StyleKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7871A41E173E9B008568C2 /* StyleKey.m */; };
+		7F7871A71E173F52008568C2 /* StyleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7871A61E173F52008568C2 /* StyleManager.swift */; };
+		7F7871A91E173F66008568C2 /* StyleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7871A81E173F66008568C2 /* StyleProtocol.swift */; };
+		7F7871AC1E17431B008568C2 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7871AB1E17431B008568C2 /* ViewController2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,13 @@
 		7F7871931E173E58008568C2 /* ColorManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F7871971E173E58008568C2 /* ColorManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManagerTests.swift; sourceTree = "<group>"; };
 		7F7871991E173E58008568C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F7871A21E173E9B008568C2 /* ColorManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ColorManager-Bridging-Header.h"; sourceTree = "<group>"; };
+		7F7871A31E173E9B008568C2 /* StyleKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleKey.h; sourceTree = "<group>"; };
+		7F7871A41E173E9B008568C2 /* StyleKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleKey.m; sourceTree = "<group>"; };
+		7F7871A61E173F52008568C2 /* StyleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleManager.swift; sourceTree = "<group>"; };
+		7F7871A81E173F66008568C2 /* StyleProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleProtocol.swift; sourceTree = "<group>"; };
+		7F7871AA1E17431B008568C2 /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		7F7871AB1E17431B008568C2 /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +90,17 @@
 			children = (
 				7F7871821E173E58008568C2 /* AppDelegate.swift */,
 				7F7871841E173E58008568C2 /* ViewController.swift */,
+				7F7871AA1E17431B008568C2 /* ViewController2.h */,
+				7F7871AB1E17431B008568C2 /* ViewController2.m */,
+				7F7871A31E173E9B008568C2 /* StyleKey.h */,
+				7F7871A41E173E9B008568C2 /* StyleKey.m */,
+				7F7871A61E173F52008568C2 /* StyleManager.swift */,
+				7F7871A81E173F66008568C2 /* StyleProtocol.swift */,
 				7F7871861E173E58008568C2 /* Main.storyboard */,
 				7F7871891E173E58008568C2 /* Assets.xcassets */,
 				7F78718B1E173E58008568C2 /* LaunchScreen.storyboard */,
 				7F78718E1E173E58008568C2 /* Info.plist */,
+				7F7871A21E173E9B008568C2 /* ColorManager-Bridging-Header.h */,
 			);
 			path = ColorManager;
 			sourceTree = "<group>";
@@ -146,6 +164,7 @@
 				TargetAttributes = {
 					7F78717E1E173E58008568C2 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					7F7871921E173E58008568C2 = {
@@ -200,7 +219,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F7871851E173E58008568C2 /* ViewController.swift in Sources */,
+				7F7871A51E173E9B008568C2 /* StyleKey.m in Sources */,
+				7F7871A91E173F66008568C2 /* StyleProtocol.swift in Sources */,
 				7F7871831E173E58008568C2 /* AppDelegate.swift in Sources */,
+				7F7871A71E173F52008568C2 /* StyleManager.swift in Sources */,
+				7F7871AC1E17431B008568C2 /* ViewController2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,10 +362,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ColorManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dnthome.ColorManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ColorManager/ColorManager-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -351,10 +377,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ColorManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dnthome.ColorManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ColorManager/ColorManager-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

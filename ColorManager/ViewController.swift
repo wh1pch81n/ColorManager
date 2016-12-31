@@ -9,17 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+	@IBOutlet weak var label1: UILabel!
+	@IBOutlet weak var label2: UILabel!
+	@IBOutlet weak var exampleView: UIView!
+	
+	override func loadView() {
+		super.loadView()
+		
+		// Using default
+		StyleManager.style = DefaultStyle()
+		
+		view.backgroundColor = StyleManager.color.backgroundColorRegular
+		label1.textColor = StyleManager.color.textColorRegular
+		label1.font = StyleManager.font.fontRegular
+		
+		label2.textColor = StyleManager.color.textColorLight
+		label2.font = StyleManager.font.fontRegular
+		
+		exampleView.backgroundColor = StyleManager.color.customColor(from: .example)
 	}
-
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
-	}
-
 
 }
 
