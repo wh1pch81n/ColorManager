@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ColorManagerFramework
 
 class ViewController: UIViewController {
 	@IBOutlet weak var label1: UILabel!

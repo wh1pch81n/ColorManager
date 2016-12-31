@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7F78717E1E173E58008568C2"
-               BuildableName = "ColorManager.app"
-               BlueprintName = "ColorManager"
+               BlueprintIdentifier = "7F7871B11E1752E5008568C2"
+               BuildableName = "ColorManagerFramework.framework"
+               BlueprintName = "ColorManagerFramework"
                ReferencedContainer = "container:ColorManager.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,36 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7F7871921E173E58008568C2"
-               BuildableName = "ColorManagerTests.xctest"
-               BlueprintName = "ColorManagerTests"
-               ReferencedContainer = "container:ColorManager.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7F7871B91E1752E6008568C2"
-               BuildableName = "ColorManagerFrameworkTests.xctest"
-               BlueprintName = "ColorManagerFrameworkTests"
-               ReferencedContainer = "container:ColorManager.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7F78717E1E173E58008568C2"
-            BuildableName = "ColorManager.app"
-            BlueprintName = "ColorManager"
-            ReferencedContainer = "container:ColorManager.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -71,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7F78717E1E173E58008568C2"
-            BuildableName = "ColorManager.app"
-            BlueprintName = "ColorManager"
+            BlueprintIdentifier = "7F7871B11E1752E5008568C2"
+            BuildableName = "ColorManagerFramework.framework"
+            BlueprintName = "ColorManagerFramework"
             ReferencedContainer = "container:ColorManager.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -90,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7F78717E1E173E58008568C2"
-            BuildableName = "ColorManager.app"
-            BlueprintName = "ColorManager"
+            BlueprintIdentifier = "7F7871B11E1752E5008568C2"
+            BuildableName = "ColorManagerFramework.framework"
+            BlueprintName = "ColorManagerFramework"
             ReferencedContainer = "container:ColorManager.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

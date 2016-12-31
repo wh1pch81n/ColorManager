@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ColorManager-Swift.h"
+@import ColorManagerFramework;
 
 @interface ViewController2 : UIViewController
 
