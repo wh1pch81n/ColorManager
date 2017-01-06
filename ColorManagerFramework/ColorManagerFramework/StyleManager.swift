@@ -11,7 +11,7 @@ import UIKit
 /**
 Style manager is a globally available, globally settable class of which anyone can grab a theme color, or font
 */
-@objc
+@objc(CMStyleManager)
 public class StyleManager: NSObject {
 	/** The current style */
 	public static var style: ColorProtocol & FontProtocol = DefaultStyle()
@@ -21,6 +21,8 @@ public class StyleManager: NSObject {
 	
 	/** computed property to get only the FontProtocol */
 	public static var font: FontProtocol { return style }
+	
+	public var boar: String!
 }
 
 /**

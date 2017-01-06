@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F02A3791E1F322D0079FB9F /* ThingFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F02A3701E1F322D0079FB9F /* ThingFramework.framework */; };
+		7F02A3801E1F322D0079FB9F /* ThingFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A37F1E1F322D0079FB9F /* ThingFrameworkTests.swift */; };
+		7F02A3821E1F322D0079FB9F /* ThingFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F02A3721E1F322D0079FB9F /* ThingFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F02A3851E1F322D0079FB9F /* ThingFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F02A3701E1F322D0079FB9F /* ThingFramework.framework */; };
+		7F02A3861E1F322D0079FB9F /* ThingFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7F02A3701E1F322D0079FB9F /* ThingFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7F02A38F1E1F325B0079FB9F /* StyleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A38E1E1F325B0079FB9F /* StyleManager.swift */; };
 		7F7871831E173E58008568C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7871821E173E58008568C2 /* AppDelegate.swift */; };
 		7F7871851E173E58008568C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7871841E173E58008568C2 /* ViewController.swift */; };
 		7F7871881E173E58008568C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F7871861E173E58008568C2 /* Main.storyboard */; };
@@ -26,6 +32,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7F02A37A1E1F322D0079FB9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F7871771E173E58008568C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F02A36F1E1F322D0079FB9F;
+			remoteInfo = ThingFramework;
+		};
+		7F02A37C1E1F322D0079FB9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F7871771E173E58008568C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F78717E1E173E58008568C2;
+			remoteInfo = ColorManager;
+		};
+		7F02A3831E1F322D0079FB9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F7871771E173E58008568C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F02A36F1E1F322D0079FB9F;
+			remoteInfo = ThingFramework;
+		};
 		7F7871941E173E58008568C2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7F7871771E173E58008568C2 /* Project object */;
@@ -63,6 +90,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				7F02A3861E1F322D0079FB9F /* ThingFramework.framework in Embed Frameworks */,
 				7F7871C81E1752E6008568C2 /* ColorManagerFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -71,6 +99,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7F02A3701E1F322D0079FB9F /* ThingFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ThingFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F02A3721E1F322D0079FB9F /* ThingFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThingFramework.h; sourceTree = "<group>"; };
+		7F02A3731E1F322D0079FB9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F02A3781E1F322D0079FB9F /* ThingFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThingFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F02A37F1E1F322D0079FB9F /* ThingFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingFrameworkTests.swift; sourceTree = "<group>"; };
+		7F02A3811E1F322D0079FB9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F02A38E1E1F325B0079FB9F /* StyleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleManager.swift; sourceTree = "<group>"; };
 		7F78717F1E173E58008568C2 /* ColorManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F7871821E173E58008568C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F7871841E173E58008568C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,10 +132,26 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7F02A36C1E1F322D0079FB9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F02A3751E1F322D0079FB9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F02A3791E1F322D0079FB9F /* ThingFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F78717C1E173E58008568C2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F02A3851E1F322D0079FB9F /* ThingFramework.framework in Frameworks */,
 				7F7871C71E1752E6008568C2 /* ColorManagerFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,6 +181,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F02A3711E1F322D0079FB9F /* ThingFramework */ = {
+			isa = PBXGroup;
+			children = (
+				7F02A3721E1F322D0079FB9F /* ThingFramework.h */,
+				7F02A38D1E1F32380079FB9F /* ThinkFramework */,
+				7F02A3731E1F322D0079FB9F /* Info.plist */,
+			);
+			path = ThingFramework;
+			sourceTree = "<group>";
+		};
+		7F02A37E1E1F322D0079FB9F /* ThingFrameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				7F02A37F1E1F322D0079FB9F /* ThingFrameworkTests.swift */,
+				7F02A3811E1F322D0079FB9F /* Info.plist */,
+			);
+			path = ThingFrameworkTests;
+			sourceTree = "<group>";
+		};
+		7F02A38D1E1F32380079FB9F /* ThinkFramework */ = {
+			isa = PBXGroup;
+			children = (
+				7F02A38E1E1F325B0079FB9F /* StyleManager.swift */,
+			);
+			name = ThinkFramework;
+			sourceTree = "<group>";
+		};
 		7F7871761E173E58008568C2 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +215,8 @@
 				7F7871961E173E58008568C2 /* ColorManagerTests */,
 				7F7871B31E1752E6008568C2 /* ColorManagerFramework */,
 				7F7871C01E1752E6008568C2 /* ColorManagerFrameworkTests */,
+				7F02A3711E1F322D0079FB9F /* ThingFramework */,
+				7F02A37E1E1F322D0079FB9F /* ThingFrameworkTests */,
 				7F7871801E173E58008568C2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -148,6 +228,8 @@
 				7F7871931E173E58008568C2 /* ColorManagerTests.xctest */,
 				7F7871B21E1752E5008568C2 /* ColorManagerFramework.framework */,
 				7F7871BA1E1752E6008568C2 /* ColorManagerFrameworkTests.xctest */,
+				7F02A3701E1F322D0079FB9F /* ThingFramework.framework */,
+				7F02A3781E1F322D0079FB9F /* ThingFrameworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -210,6 +292,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		7F02A36D1E1F322D0079FB9F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F02A3821E1F322D0079FB9F /* ThingFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F7871AF1E1752E5008568C2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -222,6 +312,43 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		7F02A36F1E1F322D0079FB9F /* ThingFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F02A38B1E1F322D0079FB9F /* Build configuration list for PBXNativeTarget "ThingFramework" */;
+			buildPhases = (
+				7F02A36B1E1F322D0079FB9F /* Sources */,
+				7F02A36C1E1F322D0079FB9F /* Frameworks */,
+				7F02A36D1E1F322D0079FB9F /* Headers */,
+				7F02A36E1E1F322D0079FB9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ThingFramework;
+			productName = ThingFramework;
+			productReference = 7F02A3701E1F322D0079FB9F /* ThingFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7F02A3771E1F322D0079FB9F /* ThingFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F02A38C1E1F322D0079FB9F /* Build configuration list for PBXNativeTarget "ThingFrameworkTests" */;
+			buildPhases = (
+				7F02A3741E1F322D0079FB9F /* Sources */,
+				7F02A3751E1F322D0079FB9F /* Frameworks */,
+				7F02A3761E1F322D0079FB9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F02A37B1E1F322D0079FB9F /* PBXTargetDependency */,
+				7F02A37D1E1F322D0079FB9F /* PBXTargetDependency */,
+			);
+			name = ThingFrameworkTests;
+			productName = ThingFrameworkTests;
+			productReference = 7F02A3781E1F322D0079FB9F /* ThingFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		7F78717E1E173E58008568C2 /* ColorManager */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F78719C1E173E58008568C2 /* Build configuration list for PBXNativeTarget "ColorManager" */;
@@ -235,6 +362,7 @@
 			);
 			dependencies = (
 				7F7871C61E1752E6008568C2 /* PBXTargetDependency */,
+				7F02A3841E1F322D0079FB9F /* PBXTargetDependency */,
 			);
 			name = ColorManager;
 			productName = ColorManager;
@@ -306,6 +434,16 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Derrick Ho";
 				TargetAttributes = {
+					7F02A36F1E1F322D0079FB9F = {
+						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+					7F02A3771E1F322D0079FB9F = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7F78717E1E173E58008568C2;
+					};
 					7F78717E1E173E58008568C2 = {
 						CreatedOnToolsVersion = 8.2.1;
 						LastSwiftMigration = 0820;
@@ -344,11 +482,27 @@
 				7F7871921E173E58008568C2 /* ColorManagerTests */,
 				7F7871B11E1752E5008568C2 /* ColorManagerFramework */,
 				7F7871B91E1752E6008568C2 /* ColorManagerFrameworkTests */,
+				7F02A36F1E1F322D0079FB9F /* ThingFramework */,
+				7F02A3771E1F322D0079FB9F /* ThingFrameworkTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7F02A36E1E1F322D0079FB9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F02A3761E1F322D0079FB9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F78717D1E173E58008568C2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -383,6 +537,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7F02A36B1E1F322D0079FB9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F02A38F1E1F325B0079FB9F /* StyleManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F02A3741E1F322D0079FB9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F02A3801E1F322D0079FB9F /* ThingFrameworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F78717B1E173E58008568C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -422,6 +592,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7F02A37B1E1F322D0079FB9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F02A36F1E1F322D0079FB9F /* ThingFramework */;
+			targetProxy = 7F02A37A1E1F322D0079FB9F /* PBXContainerItemProxy */;
+		};
+		7F02A37D1E1F322D0079FB9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F78717E1E173E58008568C2 /* ColorManager */;
+			targetProxy = 7F02A37C1E1F322D0079FB9F /* PBXContainerItemProxy */;
+		};
+		7F02A3841E1F322D0079FB9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F02A36F1E1F322D0079FB9F /* ThingFramework */;
+			targetProxy = 7F02A3831E1F322D0079FB9F /* PBXContainerItemProxy */;
+		};
 		7F7871951E173E58008568C2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7F78717E1E173E58008568C2 /* ColorManager */;
@@ -464,6 +649,77 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7F02A3871E1F322D0079FB9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ThingFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dnthome.ThingFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7F02A3881E1F322D0079FB9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ThingFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dnthome.ThingFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7F02A3891E1F322D0079FB9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = ThingFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dnthome.ThingFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ColorManager.app/ColorManager";
+			};
+			name = Debug;
+		};
+		7F02A38A1E1F322D0079FB9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = ThingFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dnthome.ThingFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ColorManager.app/ColorManager";
+			};
+			name = Release;
+		};
 		7F78719A1E173E58008568C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -687,6 +943,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7F02A38B1E1F322D0079FB9F /* Build configuration list for PBXNativeTarget "ThingFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F02A3871E1F322D0079FB9F /* Debug */,
+				7F02A3881E1F322D0079FB9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7F02A38C1E1F322D0079FB9F /* Build configuration list for PBXNativeTarget "ThingFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F02A3891E1F322D0079FB9F /* Debug */,
+				7F02A38A1E1F322D0079FB9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		7F78717A1E173E58008568C2 /* Build configuration list for PBXProject "ColorManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -703,6 +975,7 @@
 				7F78719E1E173E58008568C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F78719F1E173E58008568C2 /* Build configuration list for PBXNativeTarget "ColorManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -711,6 +984,7 @@
 				7F7871A11E173E58008568C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F7871C91E1752E6008568C2 /* Build configuration list for PBXNativeTarget "ColorManagerFramework" */ = {
 			isa = XCConfigurationList;
@@ -719,6 +993,7 @@
 				7F7871CB1E1752E6008568C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F7871CD1E1752E6008568C2 /* Build configuration list for PBXNativeTarget "ColorManagerFrameworkTests" */ = {
 			isa = XCConfigurationList;
@@ -727,6 +1002,7 @@
 				7F7871CF1E1752E6008568C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

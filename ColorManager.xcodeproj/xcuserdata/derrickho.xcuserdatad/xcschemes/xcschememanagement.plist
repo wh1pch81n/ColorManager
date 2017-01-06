@@ -14,9 +14,24 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>ThingFramework.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>7F02A36F1E1F322D0079FB9F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7F02A3771E1F322D0079FB9F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7F78717E1E173E58008568C2</key>
 		<dict>
 			<key>primary</key>

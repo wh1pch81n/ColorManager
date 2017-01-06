@@ -48,6 +48,16 @@
                ReferencedContainer = "container:ColorManager.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7F02A3771E1F322D0079FB9F"
+               BuildableName = "ThingFrameworkTests.xctest"
+               BlueprintName = "ThingFrameworkTests"
+               ReferencedContainer = "container:ColorManager.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

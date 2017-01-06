@@ -13,16 +13,16 @@
 
 - (void)loadView {
 	[super loadView];
-	StyleManager.style = [RosyStyle new];
+	CMStyleManager.style = [RosyStyle new];
 	
-	self.view.backgroundColor = [[StyleManager color] backgroundColorRegular];
-	self.label1.textColor = [[StyleManager color] textColorRegular];
-	self.label1.font = [[StyleManager font] fontRegular];
+	self.view.backgroundColor = [[CMStyleManager color] backgroundColorRegular];
+	self.label1.textColor = [[CMStyleManager color] textColorRegular];
+	self.label1.font = [[CMStyleManager font] fontRegular];
 	
-	self.label2.textColor = [[StyleManager color] textColorLight];
-	self.label2.font = [[StyleManager font] fontRegular];
+	self.label2.textColor = [[CMStyleManager color] textColorLight];
+	self.label2.font = [[CMStyleManager font] fontRegular];
 	
-	self.exampleView.backgroundColor = [[StyleManager color] customColorFrom:FontKeyExample];
+	self.exampleView.backgroundColor = [[CMStyleManager color] customColorFrom:FontKeyExample];
 }
 
 @end

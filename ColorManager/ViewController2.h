@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @import ColorManagerFramework;
+@import ThingFramework;
 
 @interface ViewController2 : UIViewController
 

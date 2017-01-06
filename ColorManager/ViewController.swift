@@ -8,26 +8,37 @@
 
 import UIKit
 import ColorManagerFramework
+import ThingFramework
 
 class ViewController: UIViewController {
 	@IBOutlet weak var label1: UILabel!
 	@IBOutlet weak var label2: UILabel!
 	@IBOutlet weak var exampleView: UIView!
 	
+	var sm: ThingFramework.StyleManager!
+	
 	override func loadView() {
 		super.loadView()
 		
 		// Using default
+
 		StyleManager.style = DefaultStyle()
+		StyleManager.style = "hello"
+		self.sm.name = "9"
 		
-		view.backgroundColor = StyleManager.color.backgroundColorRegular
-		label1.textColor = StyleManager.color.textColorRegular
-		label1.font = StyleManager.font.fontRegular
-		
-		label2.textColor = StyleManager.color.textColorLight
-		label2.font = StyleManager.font.fontRegular
-		
-		exampleView.backgroundColor = StyleManager.color.customColor(from: .example)
+		StyleManager().name = "asdf"
+		StyleManager().boar
+		let s: String = StyleManager.style
+//		StyleManager.style = DefaultStyle()
+//		
+//		view.backgroundColor = StyleManager.color.backgroundColorRegular
+//		label1.textColor = StyleManager.color.textColorRegular
+//		label1.font = StyleManager.font.fontRegular
+//		
+//		label2.textColor = StyleManager.color.textColorLight
+//		label2.font = StyleManager.font.fontRegular
+//		
+//		exampleView.backgroundColor = StyleManager.color.customColor(from: .example)
 	}
 
 }
