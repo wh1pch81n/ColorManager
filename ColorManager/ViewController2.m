@@ -47,7 +47,7 @@
 
 - (UIColor *)customColorFrom:(ColorKey)key {
 	if ([key isEqualToString:FontKeyExample]) {
-		return [UIColor purpleColor];
+		return [UIColor whiteColor];
 	} else {
 		return nil;
 	}

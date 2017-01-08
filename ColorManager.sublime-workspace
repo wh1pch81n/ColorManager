@@ -1,0 +1,468 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"color",
+				"colorWithRed"
+			],
+			[
+				"app",
+				"APP_NAME"
+			],
+			[
+				"x",
+				"xcodeproj"
+			],
+			[
+				"project",
+				"project_path"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "Package Control Messages\n========================\n\nSwiftKitten\n-----------\n\n  ## SwiftKitten\n  \n  SwiftKitten is a Swift autocompleter for Sublime Text, via the adorable \n  [SourceKitten](https://github.com/jpsim/SourceKitten.git) framework.\n  Faster than XCode !\n  \n  \n  ![](demo.gif)\n  \n  \n  This package is new and still in beta! I welcome any suggestions. If\n  you find a bug, please open an issue. If you want to contribute, feel\n  free to fork and submit a pull request.\n  \n  \n  ### Installation\n  \n  First, make sure to install [SourceKitten](https://github.com/jpsim/SourceKitten.git) !\n  \n  SwiftKitten is available via Package Control.\n  \n  To install manually, clone this repository into your packages directory:\n  \n  `git clone https://github.com/johncsnyder/SwiftKitten.git`\n  \n  In Sublime, run `Preferences: Browse Packages`  from the command palette \n  to find your packages directory. \n  \n  \n  ### Dependencies\n  \n  The dependencies are included with the SwiftKitten package.\n  \n  #### ijson\n  \n  SwiftKitten uses [ijson](https://pypi.python.org/pypi/ijson) to parse\n  completions results from SourceKitten. By default, SwiftKitten will use\n  the pure python backend. If the faster `yajl2_cffi` backend is available,\n  SwiftKitten will automatically load it. It is highly recommended that\n  you build the cffi backend.\n  \n  \n  #### cffi [optional]\n  \n  Navigate to `[Packages]/SwiftKitten/cffi/` and run `python setup.py build`.\n  This will build cffi in place. Maybe sure to run this command with `python3.3`.\n  Must be compatible with Sublime. Next time you start Sublime, SwiftKitten will\n  load the `yajl2_cffi` backend. \n  \n  \n  \n  ### Caching\n  \n  SwiftKitten uses [pygments](http://pygments.org) to parse autocomplete\n  prefixes and caches the result for the next time you request it. There will\n  be a slight delay the first time you autocomplete a function, but the next\n  time, it will be instantaneous. For example\n  \n  ![](example.png)\n  \n  SwiftKitten will remember the autocomplete results for `foo` and cache them.\n  The next time you type `foo.`, SwiftKitten will return the cached results.\n  Also, an autocomplete request will be sent if the cached results have timed\n  out (See `cache_timeout` in package settings). If the results\n  have changed, SwiftKitten will update the autocomplete window. A default\n  cache timeout of one second ensures you will always be shown up-to-date results,\n  while preventing a barrage of unnecessary requests to SourceKitten.\n  \n  To clear the cache manually, run `SwiftKitten: Clear Cache` from the command\n  palette (this clears the framework cache also).\n  \n  \n  \n  ### Frameworks\n  \n  SwiftKitten parses your file to find imported frameworks automatically.\n  SwiftKitten requests and caches framework globals separately, since they\n  are only needed once and requesting them via SourceKitten can take a while\n  (e.g. 20-30 seconds for Foundation).  It is possible to exclude specific \n  frameworks from autocompletion results (See `exclude_framework_globals` in \n  package settings).\n  \n  The framework cache is persistant between sessions. It is saved to\n  Sublime's cache folder on saving a view, and is loaded next time SwiftKitten\n  is loaded.\n  \n  \n  ##### External frameworks\n  \n  Please provide a list of paths to external frameworks in settings under\n  `extra_framework_paths`. These are passed to SourceKitten via compilerargs.\n  \n  \n  \n  \n  ### Documentation [experimental]\n  \n  Running `SwiftKitten: Display Documentation` from the command palette,\n  or by pressing `ctrl+alt+d` will search a docset (path specified in settings)\n  via _docsetutil_ and display the most relevant entry in an html popup.\n  \n  \n  ![](docdemo.gif)\n  \n  \n  ### Settings\n  \n  See `SwiftKitten.sublime-settings` for more settings and information.\n  Copy this file to `[Packages]/User` to customize the settings.\n  \n  \n  ```js\n  /*\n      SwiftKitten default settings.\n  \n      All settings can be overriden in a sublime project file.\n  */\n  {\n  \t/* \n  \t\tPath to SourceKitten binary.\n  \t\tSee `https://github.com/jpsim/SourceKitten`.\n  \t*/\n  \t\"sourcekitten_binary\" : \"/usr/local/bin/sourcekitten\",\n  \n  \t/*\n  \t\tsdk to link with. SourceKitten will find the \n  \t\tdefault sdk (OS X) if left blank.\n  \t*/\n  \t\"sdk\" : \"\",\n  \n  \t/*\n  \t\tExtra framework search paths.\n  \n  \t\tTo enable autocompletion for external frameworks, \n  \t\tadd the path to the directory containing the \n  \t\tframework here.\n  \t*/\n  \t\"extra_framework_paths\" : [],\n  \n  \t/*\n  \t\tExtra compiler arguments to SourceKitten.\n  \t*/\n  \t\"extra_compilerargs\" : \"\",\n  \n  \t/*\n  \t\tExclude globals from specific frameworks in auto-\n  \t\tcompletion results. For example, `import Foundation`\n  \t\tadds a lot of bloat to autocomplete results, and can \n  \t\tslow down typing.\n  \t*/\n  \t\"exclude_framework_globals\" : [\"Foundation\"],\n  \n  \t/*\n  \t\tTimeout for cached completion data (in seconds).\n  \t*/\n  \t\"cache_timeout\" : 1.0,\n  \t\n  \t/*\n  \t\tLimit to number of concurrent completion requests.\n  \t*/\n  \t\"concurrent_request_limit\" : 4,\n  \n  \t/*\n  \t\tEnable linting. This will query structure info via\n  \t\tSourceKitten, and underline any parse errors. Move \n  \t\tthe cursor to the error position to see the error \n  \t\tdescription in the status bar.\n  \t*/\n  \t\"linting\" : true,\n  \n  \t/*\n          Supress Sublime Text regular completions.\n      */\n  \t\"suppress_word_completions\" : true,\n  \t\"suppress_explicit_completions\" : true,\n  \n  \t/*\n  \t\tPath to docset.\n  \n  \t\tRunning `ctrl+alt+d` will search the docset for the\n  \t\tcurrent word or selection and display the docs in\n  \t\ta popup.\n  \t*/\n  \t\"docsetutil_binary\" : \"/usr/local/bin/docsetutil\",\n  \t\"docset\" : \"/Applications/Xcode.app/Contents/Developer/Documentation/DocSets/com.apple.adc.documentation.OSX.docset\"\n  }\n  ```\n  \n  \n  Additionally, settings can be overridden in a sublime project file.\n  \n  It is recommended to add the following to user or Swift syntax specific preferences:\n  \n  ```js\n  \"auto_complete_triggers\": [ {\"selector\": \"source.swift\", \"characters\": \".\"} ]\n  ```\n  \n  \n  \n  ### Troubleshooting\n  \n  \n  If autocompletion is not working, pull up the Sublime python\n  console (``ctrl+` ``) and see if any error messages are reported.\n  \n  \n  \n  \n  ### TO DO\n  \n  \n  - Add support for multi-file projects/modules (e.g. specified in\n  \ta sublime project file).\n  \n  - Parse Xcode project to get file list and embedded frameworks \n  \t(similiar to SourceKittenDaemon).\n  \n  - Add Xcode build, run and debug commands. Build system is not\n  \tflexible enough. Specify the xcode project in sublime project\n  \tfile. Or if xcode project in same folder as sublime project,\n  \tuse this one as default.\n  \n  - Build cffi automatically on sublime package install ?\n  \tI'm not sure if sublime's python interpreter has the\n  \tnecessary tools to build it. Tried briefly but could\n  \tnot get it to work.\n  \n  - Add support for multiple docsets. Make documentation context\n  \taware. Add support for api links, so that documentation \n  \tcan be navigated.\n  \n  \n  \n  ### License\n  \n  SwiftKitten is MIT licensed.\n",
+			"settings":
+			{
+				"buffer_size": 7051,
+				"line_ending": "Unix",
+				"name": "Package Control Messages",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"file": "ColorManager/ViewController.swift",
+			"settings":
+			{
+				"buffer_size": 1292,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ColorManager/ViewController2.m",
+			"settings":
+			{
+				"buffer_size": 1299,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ColorManager.sublime-project",
+			"settings":
+			{
+				"buffer_size": 386,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sim_run_app.sh",
+			"settings":
+			{
+				"buffer_size": 369,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sim_launch.sh",
+			"settings":
+			{
+				"buffer_size": 51,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "packacge ",
+		"selected_items":
+		[
+			[
+				"packacge ",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"shell exec",
+				"Shell Exec: Open"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"keybind",
+				"Preferences: Key Bindings"
+			],
+			[
+				"reind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"inden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"consol",
+				"Set Syntax: R Console"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"sh sim_run_app.sh",
+			"window.extract_variables()[\"packages\"]"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/derrickho/Documents/Documents - Derrick’s MacBook Pro/ColorManager"
+	],
+	"file_history":
+	[
+		"/Users/derrickho/Documents/Documents - Derrick’s MacBook Pro/ColorManager/ColorManager/ViewController.swift",
+		"/Users/derrickho/Documents/Documents - Derrick’s MacBook Pro/ColorManager/ColorManager.sublime-project",
+		"/Users/derrickho/Library/Colors/Experiment.clr",
+		"/Users/derrickho/Documents/Documents - Derrick’s MacBook Pro/BoxyBoxy/README.md"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"bundle_ident"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7051,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7051,
+								7051
+							]
+						],
+						"settings":
+						{
+							"auto_indent": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_width": 2,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "ColorManager/ViewController.swift",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1292,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								776,
+								776
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Swift/Syntaxes/Swift.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 93.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "ColorManager/ViewController2.m",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1299,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								802,
+								802
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Objective-C/Objective-C.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 138.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "ColorManager.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 386,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								270,
+								270
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "sim_run_app.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 369,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								264,
+								264
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "sim_launch.sh",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 51,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								51,
+								13
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Xcode Build",
+	"project": "ColorManager.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"vc",
+				"ColorManager/ViewController.swift"
+			],
+			[
+				"viewcon",
+				"ColorManager/ViewController2.m"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 241.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
